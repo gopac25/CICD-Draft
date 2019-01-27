@@ -41,3 +41,6 @@ tar -zcvf /tmp/ansible/project2/app2/app2.tar.gz *
 
 
 Build Failure Analyzer
+
+
+for i in `docker ps -q`; do echo $i=`docker inspect --format='{{.State.StartedAt}}' $i | xargs date +%s -d`; done
